@@ -25,7 +25,7 @@ function App() {
 
         console.log("try to fetching the data from api...")
 
-        const result = await axios.get(`http://localhost:3000/api/fetch-data?code=${selectStock}`, { headers });
+        const result = await axios.get(`${process.env.REACT_APP_API_URL}/api/fetch-data?code=${selectStock}`, { headers });
 
         setData(result.data.data);
 
